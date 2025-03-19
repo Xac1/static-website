@@ -25,7 +25,8 @@ jobs:
 
       - name: Check if the Copyright is added
         run:
-          cat index.html
+          cp * build  
+          cat ./build/index.html
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
