@@ -25,8 +25,9 @@ jobs:
           echo "Copy 2025" >> index.html
 
       - name: Check if the Copyright is added
-        run:
-          mkdir build && cp . build  
+        run: |
+          mkdir build
+          cp . build  
           cat ./build/index.html
 
       - name: Upload artifact
