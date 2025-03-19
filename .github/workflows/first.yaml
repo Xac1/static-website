@@ -1,4 +1,5 @@
-name: First workflow
+name: Deploy workflow
+run-name: Deploy workflow
 
 on: [push]
 
@@ -25,7 +26,7 @@ jobs:
 
       - name: Check if the Copyright is added
         run:
-          cp * build  
+          mkdir build && cp . build  
           cat ./build/index.html
 
       - name: Upload artifact
