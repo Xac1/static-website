@@ -27,3 +27,24 @@ jobs:
         run:
           cat index.html
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-build
+          path: ./build/
+
+  deploy:
+    needs: first-job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: my-build
+
+    - name: Use artifacts:
+      run: |
+        ls -lha
+        cat ./build/index.html
+
+
