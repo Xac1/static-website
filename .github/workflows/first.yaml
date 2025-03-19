@@ -48,6 +48,6 @@ jobs:
     - name: Use artifacts
       run: |
         ls -lha
-        cat ./build/index.html
+        cat index.html
 
 
