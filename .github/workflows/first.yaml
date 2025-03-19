@@ -27,7 +27,7 @@ jobs:
       - name: Check if the Copyright is added
         run: |
           mkdir build
-          cp . build  
+          cp * build  
           cat ./build/index.html
 
       - name: Upload artifact
