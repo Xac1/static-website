@@ -18,5 +18,12 @@ jobs:
         run: |
           pwd
           ls -lha
+      
+      - name: Add Copyright at the end of index file
+        run:
+          echo "Copy 2025" >> index.html
 
+      - name: Check if the Copyright is added
+        run:
+          cat index.html
 
