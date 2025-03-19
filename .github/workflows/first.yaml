@@ -42,7 +42,7 @@ jobs:
       with:
         name: my-build
 
-    - name: Use artifacts:
+    - name: Use artifacts
       run: |
         ls -lha
         cat ./build/index.html
